@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00  
+  
+; 创建新的文件类型  
+[HKEY_CLASSES_ROOT\.mpf]  
+@="MusicProgrammingFile"  
+  
+; 设置文件类型的描述  
+[HKEY_CLASSES_ROOT\MusicProgrammingFile]  
+@="Music Programming File"  
+   
+[HKEY_CLASSES_ROOT\MusicProgrammingFile\DefaultIcon]  
+@="0"  
+  
+; 设置文件类型的“打开”动作  
+[HKEY_CLASSES_ROOT\MusicProgrammingFile\shell]  
+  
+[HKEY_CLASSES_ROOT\MusicProgrammingFile\shell\open]  
+  
+; 设置“打开”动作的命令  
+; 注意：路径中的空格用引号括起来，并且双引号需要转义  
+[HKEY_CLASSES_ROOT\MusicProgrammingFile\shell\open\command]  
+@="\"C:\Windows\System32\notepad.exe" \"%1\""
